@@ -62,6 +62,8 @@ namespace cigen
             builder.CultureEnglishName = opts.EnglishName;
             builder.CultureNativeName = opts.NativeName;
 
+            builder.Parent = baseCulture;
+
             if (CultureExists(opts.Name))
             {
                 CultureAndRegionInfoBuilder.Unregister(opts.Name);
